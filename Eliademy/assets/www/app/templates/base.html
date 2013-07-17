@@ -1,0 +1,64 @@
+<% if (showMenu) { %>
+<div id="base-container">
+<div id="main-menu" style="width: 30%; bottom: 0px; float: left; display: none; z-index: 1000;">
+ <p class="user"><img src="<%= user.profileimageurlsmall %>" alt="<%= user.fullname %>"><%= user.fullname %></p>
+ <% if (!ismoodle) { %>
+ <a href="/now" class="stylesheet-now"><i class="icon-white icon-time"></i>Now</a>
+ <% } %>
+ <a href="/courses" class="stylesheet-course stylesheet-courses stylesheet-discussion-new stylesheet-discussion stylesheet-discussions stylesheet-participants"><i class="icon-white icon-book"></i>Courses</a>
+ <a href="/tasks" class="stylesheet-quiz1 stylesheet-task stylesheet-tasks"><i class="icon-white icon-file"></i>Tasks</a>
+ <% if (!ismoodle) { %>
+ <a href="/notifications" class="stylesheet-notifications"><i class="icon-white icon-warning-sign"></i>Notifications</a>
+ <% } %>
+ <div style="position: absolute; width: 100%; bottom: 0px;">
+  <a href="http://eliademy.uservoice.com/" style="border-top: 1px solid #444;"><i class="icon-white icon-question-sign"></i>Support</a>
+  <a href="/logout"><i class="icon-white icon-off"></i>Logout</a>
+ </div>
+</div>
+ <div id="app-toolbar" class="navbar" style="top: 0px; right: 0px; left: auto; display: none; width: 70%;">
+  <div class="navbar-inner" style="border: none; border-radius: 0px; text-align: center; height: 55px;">
+  
+   <div class="rectangle" id="toolbar-main-button-box" style="float: left;display: none; ">
+    <span class="brand" id="toolbar-main-button"><i class="icon-white icon-reorder"></i></span>
+   </div> 
+   <div class="rectangle" style="float: right; position: relative; left: 5px;">
+    <span class="brand" id="toolbar-refresh-button"><i class="icon-white icon-refresh"></i></span>
+   </div> 
+   <img alt="Eliademy" src="images/eliademy-logo-text.png" style="height: 20px; margin-top: 12px;">
+  </div>
+ </div>
+ <div id="main-content"style="width: 70%; bottom: 0px; float: right;"></div>
+</div>
+<% } else { %>
+<div id="main-menu" style="display: none;">
+ <p class="user"><img src="<%= user.profileimageurlsmall %>" alt="<%= user.fullname %>"><%= user.fullname %></p>
+ <% if (!ismoodle) { %>
+ <a href="/now" class="stylesheet-now"><i class="icon-white icon-time"></i>Now</a>
+ <% } %>
+ <a href="/courses" class="stylesheet-course stylesheet-courses stylesheet-discussion-new stylesheet-discussion stylesheet-discussions stylesheet-participants"><i class="icon-white icon-book"></i>Courses</a>
+ <a href="/tasks" class="stylesheet-quiz1 stylesheet-task stylesheet-tasks"><i class="icon-white icon-file"></i>Tasks</a>
+ <% if (!ismoodle) { %>
+ <a href="/notifications" class="stylesheet-notifications"><i class="icon-white icon-warning-sign"></i>Notifications</a>
+ <% } %>
+
+ <div style="position: absolute; width: 100%; bottom: 0px;">
+  <a href="http://eliademy.uservoice.com/" style="border-top: 1px solid #444;"><i class="icon-white icon-question-sign"></i>Support</a>
+  <a href="/logout"><i class="icon-white icon-off"></i>Logout</a>
+ </div>
+</div>
+
+<div id="base-container">
+ <div id="app-toolbar" class="navbar" style="top: 0px; display: none;">
+  <div class="navbar-inner" style="border: none; border-radius: 0px; text-align: center;">
+   <div class="rectangle" style="float: left;">
+    <span class="brand" id="toolbar-main-button"><i class="icon-white icon-reorder"></i></span>
+   </div> 
+   <div class="rectangle" style="float: right; position: relative; left: 5px;">
+    <span class="brand" id="toolbar-refresh-button"><i class="icon-white icon-refresh"></i></span>
+   </div> 
+   <img alt="Eliademy" src="images/eliademy-logo-text.png" style="height: 20px; margin-top: 12px;">
+  </div>
+ </div>
+ <div id="main-content"></div>
+</div>
+<% } %>

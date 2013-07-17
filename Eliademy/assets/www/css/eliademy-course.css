@@ -1,0 +1,103 @@
+  body {
+   padding-left: 0;
+   padding-right: 0;
+   
+ }
+ 
+ #coursesPage, #main-content {
+  background-color: #eaeaea;
+   background-image: none;
+ }
+
+.container-fluid.container-fluid-1 {
+  border-radius: 2px;
+  -moz-box-shadow: 0px 1px 5px 0px #999999;
+  -webkit-box-shadow: 0px 1px 5px 0px #999999;
+  -o-box-shadow: 0px 1px 5px 0px #999999;
+  box-shadow: 0px 1px 5px 0px #999999;
+  background: #ffffff;
+  margin-bottom: 10px;
+}
+.container-fluid.container-fluid-2 {
+  margin-bottom: 15px;
+  margin-top: 5px;
+  background-size: cover;
+}
+.container-fluid.container-fluid-3 {
+  padding: 0px 10px 10px 10px;
+}
+.container-fluid-3 .container-fluid-1.container-fluid-4 {
+  margin-top: 15px;
+}
+.container-fluid-3 .container-fluid-1.container-fluid-4 .heading {
+  padding: 10px 15px 10px 15px;
+  margin: 0px;
+  -moz-box-shadow: inset 0px 2px 35px 0px rgba(68, 68, 68, 0);
+  -webkit-box-shadow: inset 0px 2px 35px 0px rgba(68, 68, 68, 0);
+  -o-box-shadow: inset 0px 2px 35px 0px rgba(68, 68, 68, 0);
+  box-shadow: inset 0px 2px 35px 0px rgba(68, 68, 68, 0);
+  text-shadow: 0px 1px 2px #000000;
+  font-family:"helvetica";
+  font-size: 26px;
+  color: #ffffff;
+  line-height: 32px;
+  border-radius: 2px 2px 0px 0px;
+  background: rgba(0, 0, 0, 0) url(../images/source.jpg) repeat 0px 0px;
+  background-size: cover;
+}
+.container-fluid-3 .container-fluid-1.container-fluid-4 p.p-1 {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 15px 5px 15px;
+  margin: 0px;
+}
+.container-fluid-3 .container-fluid-1.container-fluid-4 div.p-2 {
+  padding: 2px 15px 10px 15px;
+}
+.container-fluid-3 .container-fluid-1 p.p-3 {
+  font-weight: bold;
+}
+.container-fluid-3 .container-fluid-1 p.p-4 {
+  font-size: 18px;
+  line-height: 24px;
+  padding: 12px 15px 5px 15px;
+}
+.container-fluid-3 .container-fluid-1 div.p-5 { margin: 0px; }
+.container-fluid-3 .container-fluid-1 p.p-5 { margin: 0px; }
+
+.container-fluid-3 .container-fluid-1 div.p-6 {
+  padding: 2px 15px 10px 15px;
+}
+.container-fluid-3 .container-fluid-1 p.p-8 {
+  padding: 15px 15px 15px 48px;
+}
+.container-fluid-3 .container-fluid-1 p.p-9 {
+  border-right: none;
+  border-bottom: none;
+  border-left: none;
+}
+.container-fluid-3 .container-fluid-1 .container-fluid-2.container-fluid-5 {
+  -moz-box-shadow: 0px 1px 5px 0px #000000;
+  -webkit-box-shadow: 0px 1px 5px 0px #000000;
+  -o-box-shadow: 0px 1px 5px 0px #000000;
+  box-shadow: 0px 1px 5px 0px #000000;
+}
+.container-fluid-3 .container-fluid-1 .container-fluid-2.container-fluid-6 {
+  -moz-box-shadow: inset 0px 0px 150px 0px #000000, 0px 1px 5px 0px #000000;
+  -webkit-box-shadow: inset 0px 0px 150px 0px #000000, 0px 1px 5px 0px #000000;
+  -o-box-shadow: inset 0px 0px 150px 0px #000000, 0px 1px 5px 0px #000000;
+  box-shadow: inset 0px 0px 150px 0px #000000, 0px 1px 5px 0px #000000;
+}
+.container-fluid-3 .container-fluid-1 div.div-1 {
+  margin: 0px 0px -21px 0px;
+}
+.container-fluid-3 .container-fluid-1 .div-1 .icon.icon-chevron-right {
+  font-size: 18px;
+  margin: -35px 10px 0px 0px;
+  height: 18px;
+  width: 18px;
+}
+.container-fluid-3 .container-fluid-1 .div-1 .image {
+  margin: -78px 0px 0px 12px;
+}

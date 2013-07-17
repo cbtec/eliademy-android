@@ -1,0 +1,130 @@
+body, #main-content {
+  padding-left: 0;
+  padding-right: 0;
+  background-color: #eaeaea;
+}
+
+.container-fluid.container-fluid-1 {
+  background: #ffffff;
+  -moz-box-shadow: 0px 1px 5px 0px #474747;
+  -webkit-box-shadow: 0px 1px 5px 0px #474747;
+  -o-box-shadow: 0px 1px 5px 0px #474747;
+  box-shadow: 0px 1px 5px 0px #474747;
+  border-radius: 3px;
+  padding: 0px;
+}
+.container-fluid.container-fluid-2 {
+  padding: 0px 10px 10px 10px;
+  margin-top: 15px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 {
+  margin-bottom: 15px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .heading {
+  padding: 10px 10px 10px 15px;
+  margin: 0px;
+  text-shadow: 0px 1px 2px #000000;
+  font-size: 30px;
+  color: #ffffff;
+  border-radius: 3px 3px 0px 0px;
+  font-family:"helvetica";
+  background: rgba(0, 0, 0, 0) url(../images/source.jpg) repeat 0px 0px;
+  background-size: cover;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 p {
+  font-weight: bold;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 p.p-1 {
+  margin: 0px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 p.p-2 {
+font-size: 14px;
+line-height: 20px;
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff;
+  text-shadow: 0px 1px 2px #000000;
+  font-family:"helvetica";
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .row-fluid .span12 .p-1.p-3 {
+  padding: 15px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .row-fluid .span12 div {
+  margin: 0px 0px -21px 0px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .row-fluid .span12 div .p-1 {
+  padding: 15px 15px 15px 48px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .row-fluid .span12 div .icon.icon-edit {
+  font-size: 18px;
+  margin: -36px 0px 0px 15px;
+  height: 18px;
+  width: 18px;
+}
+.container-fluid-2 .row-fluid .span12 .container-fluid-1 .row-fluid .span12 div .icon.icon-chevron-right {
+  font-size: 18px;
+  margin: -35px 10px 0px 0px;
+  height: 18px;
+  width: 18px;
+}
+.container-fluid-2 .container-fluid-1 .heading {
+  padding: 10px 10px 25px 15px;
+  margin: 0px;
+  text-shadow: 0px 1px 2px #000000;
+  font-size: 30px;
+  color: #ffffff;
+  border-radius: 3px 3px 0px 0px;
+  font-family:"helvetica";
+  background-size: cover;
+}
+.container-fluid-2 .container-fluid-1 .heading.heading-1 {
+  background: rgba(0, 0, 0, 0) url(../images/source-1.jpg) repeat 0px 0px;
+}
+.container-fluid-2 .container-fluid-1 p.p-4 {
+  padding: 0px 0px 0px 15px;
+  margin: -30px 0px 10px 0px;
+  color: #ffffff;
+  text-shadow: 0px 1px 2px #000000;
+  font-family:"helvetica";
+}
+.container-fluid-2 .container-fluid-1 p.p-5 {
+  padding: 15px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.container-fluid-2 .container-fluid-1 p.p-6 {
+  padding: 15px 15px 15px 48px;
+}
+.container-fluid-2 .container-fluid-1 p.p-7 {
+  font-weight: bold;
+}
+.container-fluid-2 .container-fluid-1 p.p-8 {
+  margin: 0px;
+}
+.container-fluid-2 .container-fluid-1 .row-fluid .span12 div {
+  margin: 0px 0px -21px 0px;
+}
+.container-fluid-2 .container-fluid-1 .row-fluid .span12 div .icon.icon-edit {
+  font-size: 18px;
+  margin: -36px 0px 0px 15px;
+  height: 18px;
+  width: 18px;
+}
+.container-fluid-2 .container-fluid-1 .row-fluid .span12 div .feedback
+{
+	padding: 2px 15px 30px 15px;
+    font-weight: normal;
+}
+.container-fluid-2 .container-fluid-1 .row-fluid .span12 div .label-success {
+  font-size: 16px;
+  padding: 5px;
+  margin: 25px 0px 0px 10px;
+}
+.container-fluid-2 .container-fluid-1 .row-fluid .span12 div .icon.icon-chevron-right {
+  font-size: 18px;
+  margin: -35px 10px 0px 0px;
+  height: 18px;
+  width: 18px;
+}

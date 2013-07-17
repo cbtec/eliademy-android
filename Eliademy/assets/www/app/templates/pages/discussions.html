@@ -1,0 +1,26 @@
+<div class="container-fluid container-fluid-2">
+<% _.each(forums, function (forum, idx) { %>
+  <div class="container-fluid container-fluid-1">
+<% if (!idx) { %>
+	<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>>Discussions
+	<p class="p-4"><%= course.fullname %></p>
+	</h1>
+<% } %>
+	<div class="row-fluid">
+	  <span class="span12">
+		<p class="p-1 p-2"><%= forum.name %></p>
+<% _.each(forum.discussions, function (discussion) { %>
+		<hr class="line">
+		<div>
+		  <p class="p-1 p-3 tappable open-discussion" data-forum-id="<%= forum.id %>" data-discussion-id="<%= discussion.id %>"><%= discussion.name %></p> <i class="icon icon-comment"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+		</div>
+<% }); %>
+		<hr class="line">
+		<div>
+		  <p class="p-1 p-3 tappable new-discussion" data-forum-id="<%= forum.id %>">New discussion</p> <i class="icon icon-plus"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+		</div>
+	  </span>
+	</div>
+  </div>
+<% }); %>
+</div>

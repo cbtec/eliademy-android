@@ -1,0 +1,55 @@
+<div class="container-fluid container-fluid-1">
+  <div class="container-fluid">
+	<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>><%= discussion.name %>
+	<p class="p-1 p-2"><%= course.fullname %></p>
+	</h1>
+	<div class="row-fluid">
+	  <span class="span12">
+
+<% _.each(posts, function (post, idx) { %>
+		<div class="rectangle" style="background-image: url('<%= post.profileImage %>')">
+	<% if (post.isTeacher) { %>
+        <span class="label label-warning">Teacher</span>
+	<% } %>
+		</div>
+		<p class="p-1 p-3"><%= post.firstname %> <%= post.lastname %></p>
+		<p class="p-1 p-4"><% print(str.format_time(new Date(post.created * 1000))) %></p>
+		<p class="p-5"><%= post.message %></p>
+
+<% _.each(post.attachments, function (attach) { if (attach.mimetype.substr(0, 5) == "image") { %>
+	  <div class="tappable download-link" style="text-align: center; box-shadow: 0px 1px 5px 0px #000000; max-height: 200px; overflow: hidden;" data-url="<%= attach.url %>" data-filename="<%= attach.filename %>">
+	   <img src="<%= attach.url %>" style="height: auto; max-width: 100%;">
+	  </div>
+<% }}); %>
+
+<% _.each(post.attachments, function (attach) { if (attach.mimetype.substr(0, 5) != "image") { %>
+		<hr class="line">
+	  <div class="tappable download-link" data-url="<%= attach.url %>" data-filename="<%= attach.filename %>">
+	   <i style="float: right; margin: 19px 10px 0px 0px; font-size: 18px;" class="icon icon-chevron-right pull-right"></i> 
+	   <img style="float: left; margin: 11px 0px 0px 10px;" src="images/new-material-link.png" class="image">
+	   <div style="margin: 0px; padding: 15px 15px 15px 48px; font-weight: bold;"><%= attach.filename %></div>
+	  </div>
+<% }}); %>
+
+		<hr class="line">
+<% }); %>
+
+		<div id="forum-new-post" class="div-1">
+		  <p class="p-1 tappable" id="forum-new-post-btn">Reply</p> <i class="icon icon-chevron-right pull-right"></i>  <i class="icon icon-plus"></i> 
+		</div>
+
+		<div id="forum-reply-compose" style="display: none; margin: 5px 15px 15px 15px;">
+<!--
+		  <i class="icon icon-upload pull-left" style="margin-top: 13px;"></i>
+		  <i class="icon icon-chevron-right pull-right" style="margin-top: 13px;"></i>
+		  <p id="forum-post-file-btn" class="tappable" style="line-height: 40px; padding-left: 25px;">Upload file</p>
+-->
+		  <textarea class="span12" id="forum-reply-message" style="height: 100px;" placeholder="Write here"></textarea>
+		  <button class="btn btn-large pull-right tappable" id="forum-post-reply-btn">Reply</button>
+		  <div style="clear: both;"></div>
+		</div>
+
+	  </span>
+	</div>
+  </div>
+</div>

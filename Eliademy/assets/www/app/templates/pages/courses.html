@@ -1,0 +1,35 @@
+<div class="container-fluid container-fluid-2">
+
+<% var isEmpty = true; _.each(courses, function (ci) { isEmpty = false; %>
+  <div class="container-fluid container-fluid-1">
+	<h1 class="heading heading-1"<% if (ci.coursebackground) { print(" style=\"background-image: url('" + ci.coursebackground + "');\""); } %>><%= ci.fullname %></h1>
+
+	<% var assigs = 0; _.each(ci.assignments, function (assig) { if (assig.visible && !assig.canedit && !assig.haveSubmissions) { assigs++; %>
+	<% if (assigs > 1) { %><hr class="line"><% } %>
+	<div class="div-1">
+	  <p class="tappable task-link" data-task-id="<%= assig.instanceid %>" data-task-type="<%= assig.modulename %>"><%= assig.name %></p> <i class="icon icon-edit"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+	</div>
+	<% }}); %>
+
+	<% if (!assigs) { %><p class="p-1">No tasks</p><% } %>
+
+	<div>
+	  <div>
+		<div class="btn-group pull-center">
+		 <% if (!ismoodle) { %>
+		  <a style="width: 34%; float: left;" href="/courses/<%= ci.code %>" class="btn btn-1 btn-2 btn-5"> <i class="icon icon-file pull-center"></i> Material</a></td>
+		  <a style="width: 33%; float: left; margin-left: 0px; border-left: 0px;" href="/courses/<%= ci.code %>/discussions" class="btn btn-3 btn-6"> <i class="icon icon-comments pull-center"></i> Discussions</a></td>
+		  <a style="width: 33%; float: right; margin-left: 0px; border-left: 0px;" href="/courses/<%= ci.code %>/participants" class="btn btn-1 btn-4 btn-7"> <i class="icon icon-user pull-center"></i> Participants</a></td>
+         <% }  else { %>
+          <a style="width: 50%; float: left;" href="/courses/<%= ci.code %>" class="btn btn-1 btn-2 btn-5"> <i class="icon icon-file pull-center"></i> Material</a></td>
+		  <a style="width: 50%; float: left; margin-left: 0px; border-left: 0px;" href="/courses/<%= ci.code %>/participants" class="btn btn-1 btn-4 btn-7"> <i class="icon icon-user pull-center"></i> Participants</a></td>
+         <% } %>
+		</div>
+	  </div>
+	</div>
+  </div>
+<% }); %>
+<% if (isEmpty) { %>
+<div style="font-size: 26pt; text-align: center; line-height: normal; margin-top: 20%; color: #888;">You have not joined any courses yet</div>
+<% } %>
+</div>

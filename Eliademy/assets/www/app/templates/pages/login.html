@@ -1,0 +1,60 @@
+<div class="container-fluid container-fluid-1">
+  <div class="container-fluid container-fluid-2">
+	<div class="row-fluid">
+	  <span class="span12 span12-1">
+		<img src="images/colors-with-text.png" class="pull-center image">
+	  </span>
+	</div>
+  <% if (!autoLogin) { %>
+  <table style="margin: 0px auto 10px auto;">
+	<tr>
+	 <td><input id="eliademy_service_radio" style="margin: 7px 5px 7px 0px;" type="radio" value="eliademy" name="service"<% if (fieldData.urlType == "eliademy" || !fieldData.urlType) { print(" checked=\"checked\""); } %>></td>
+	 <td><label for="eliademy_service_radio" style="margin: 0px; font-weight: bold;">Eliademy</label></td>
+	</tr>
+	<tr>
+	 <td><input style="margin: 8px 5px 10px 0px;" type="radio" value="other" name="service"<% if (fieldData.urlType == "other") { print(" checked=\"checked\""); } %>></td>
+	 <td><input style="margin: 0px; width: 210px; height: 24px;" type="text" name="other_name" id="other_service_name" placeholder="Select your school"></td>
+	</tr>
+	<tr>
+	 <td><input style="margin: 8px 5px 10px 0px;" type="radio" value="custom" name="service"<% if (fieldData.urlType == "custom") { print(" checked=\"checked\""); } %>></td>
+	 <td><input style="margin: 0px; width: 210px; height: 24px;" type="text" name="custom_url" id="custom_service_url" placeholder="Site URL"<% if (fieldData.urlType == "custom") { print(" value=\"" + fieldData.serviceurl + "\""); } %>></td>
+	</tr>
+  </table>
+
+<% if (lastError) { %>
+	<div class="row-fluid">
+		<div class="alert alert-error" style="margin: 0px 5% 15px 5%;"><%= lastError %></div>
+	</div>
+<% } %>
+
+	<div class="container-fluid">
+	  <div class="row-fluid">
+		<span class="span12">
+
+		  <div class="input-prepend" style="display: block; width: 250px; margin: 0px auto;">
+		   <span class="add-on" style="height: 38px; line-height: 30px; color: #919191; border-radius: 4px 0px 0px 0px; width: 36px; display: inline-block; border-right: none; background-color: #FFF;"><i class="icon icon-envelope-alt"></i></span>
+		   <input style="width: 215px; height: 38px; border-left: none;" class="textinput textinput-1 span2" type="text" name="username" id="username" value="<%= fieldData.username %>" placeholder="Username">
+		  </div>
+
+		  <div class="input-prepend" style="display: block; width: 250px; margin: 0px auto 10px auto;">
+		   <span class="add-on" style="height: 38px; line-height: 30px; color: #919191; border-radius: 0px 0px 0px 4px; width: 36px; display: inline-block; border-right: none; border-top: none; background-color: #FFF;"><i class="icon icon-lock"></i></span>
+		   <input style="width: 215px; height: 38px; border-left: none;" class="textinput textinput-2 span2" type="password" name="password" id="password" value="<%= fieldData.password %>" placeholder="Password">
+		  </div>
+
+		  <button class="btn pull-center btn-2" id="loginbtn"> <i class="icon icon-chevron-right pull-right"></i> Login</button>
+
+		  <button class="btn pull-center btn-1 btn-3" id="fblogin" style="padding: 7px 12px;">Log in with Facebook <i class="icon icon-facebook-sign pull-left"></i><span style="background: url('images/button-separator.png') no-repeat 50% 50%; height: 40px; width: 3px; display: block; margin-top: -7px; float: left;"></span></button>
+		   <!-- <button class="btn pull-center btn-1 btn-4">Log in with LinkedIn <i class="icon icon-linkedin pull-left"></i></button>
+		  -->
+		</span>
+	  </div>
+	</div>
+	<div class="row-fluid">
+	  <span class="span12"> <a href="http://eliademy.uservoice.com/" style="color: black;"><i class="icon icon-question-sign pull-right"></i></a></span>
+	</div>
+	<p><a href="https://eliademy.com/terms" style="color:black;">Legal notice</a></p>
+	<% } else { %>
+	<div class="progress progress-striped active" style="width: 60%; margin: 0px auto 10px auto;"><div class="bar" style="width: 100%; margin: 0px auto 10px auto;">Logging In ...</div></div>
+	<% } %>
+  </div>
+</div>

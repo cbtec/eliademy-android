@@ -1,0 +1,138 @@
+#main-menu {
+	width: 70%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	background-color: #333333;
+	z-index: 50;
+}
+
+#main-menu .user {
+	padding: 0px 0px 2px 0px;
+	margin: 0px;
+	color: #f1f1f1;
+	text-shadow: 0px 1px 2px #000000;
+	border-bottom: 1px solid #444444;
+	font-weight: bold;
+
+/*
+  border-top: 1px solid #5d5d5d;
+  border-bottom: 1px solid #252525;
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.498039);
+  font-size: 12px;
+  font-weight: bold;
+  margin: 0px;
+  padding: 0px 0px 2px 0px;
+  color: #ffffff;
+  background: #5d5d5d;
+  background-image: -moz-linear-gradient(270deg, #5d5d5d 0%, #303030 100%);
+  background-image: -webkit-linear-gradient(270deg, #5d5d5d 0%, #303030 100%);
+  background-image: -o-linear-gradient(270deg, #5d5d5d 0%, #303030 100%);
+  background-image: linear-gradient(180deg, #5d5d5d 0%, #303030 100%);
+*/
+}
+
+#main-menu .user img {
+  background-color: #80ccff;
+  background-repeat: no-repeat;
+  background-position: 0px 0px;
+  background-size: cover;
+  border-top: none;
+  border-right: 1px solid #333333;
+  border-bottom: none;
+  border-left: none;
+  width: 49px;
+  height: 50px;
+  margin-right: 15px;
+}
+
+#main-menu a {
+	text-decoration: none;
+	display: block;
+	padding: 14px 0px 15px 15px;
+	color: #f1f1f1;
+	text-shadow: 0px 1px 2px #000000;
+	border-bottom: 1px solid #444444;
+	margin: 0px;
+	font-weight: bold;
+}
+
+#main-menu a.selected, #main-menu a:active {
+	background: #1f1f1f;
+	background-image: -moz-linear-gradient(270deg, #1f1f1f 0%, #272727 100%);
+	background-image: -webkit-linear-gradient(270deg, #1f1f1f 0%, #272727 100%);
+	background-image: -o-linear-gradient(270deg, #1f1f1f 0%, #272727 100%);
+	background-image: linear-gradient(180deg, #1f1f1f 0%, #272727 100%);
+	-moz-box-shadow: inset 0px 1px 7px 0px #000000;
+	-webkit-box-shadow: inset 0px 1px 7px 0px #000000;
+	-o-box-shadow: inset 0px 1px 7px 0px #000000;
+	box-shadow: inset 0px 1px 7px 0px #000000;
+	color: #adadad;
+}
+
+#main-menu a i {
+	margin: 0px 10px 0px 0px;
+	font-size: 20px;
+	color: #f1f1f1;
+}
+
+#main-menu a.selected i {
+	color: #adadad;
+}
+
+#main-content {
+	position: relative;
+	z-index: 80;
+}
+
+#base-container.open #app-toolbar {
+	-webkit-animation-name: toolbar_open;
+	-webkit-animation-duration: 350ms;
+	-webkit-transform: translate(70%);
+
+	animation-name: toolbar_open;
+	animation-duration: 350ms;
+	transform: translate(70%);
+}
+
+#base-container.closed #app-toolbar {
+	-webkit-animation-name: toolbar_closed;
+	-webkit-animation-duration: 350ms;
+	-webkit-transform: translate(0px);
+
+	animation-name: toolbar_closed;
+	animation-duration: 350ms;
+	transform: translate(0px);
+}
+
+#base-container.open #main-content {
+	-webkit-animation-name: menu_open;
+	-webkit-animation-duration: 350ms;
+	-webkit-transform: translate(70%);
+
+	animation-name: menu_open;
+	animation-duration: 350ms;
+	transform: translate(70%);
+}
+
+#base-container.closed #main-content {
+	-webkit-animation-name: menu_closed;
+	-webkit-animation-duration: 350ms;
+	-webkit-transform: translate(0px);
+
+	animation-name: menu_closed;
+	animation-duration: 350ms;
+	transform: translate(0px);
+}
+
+@-webkit-keyframes toolbar_open { from { -webkit-transform: translate(0px); } to { -webkit-transform: translate(68%); } }
+@-webkit-keyframes toolbar_closed { from { -webkit-transform: translate(70%); } to { -webkit-transform: translate(0px); } }
+@keyframes toolbar_open { from { transform: translate(0px); } to { transform: translate(70%); } }
+@keyframes toolbar_closed { from { transform: translate(70%); } to { transform: translate(0px); } }
+
+@-webkit-keyframes menu_open { from { -webkit-transform: translate(0px); } to { -webkit-transform: translate(70%); } }
+@-webkit-keyframes menu_closed { from { -webkit-transform: translate(70%); } to { -webkit-transform: translate(0px); } }
+@keyframes menu_open { from { transform: translate(0px); } to { transform: translate(70%); } }
+@keyframes menu_closed { from { transform: translate(70%); } to { transform: translate(0px); } }

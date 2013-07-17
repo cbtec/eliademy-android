@@ -1,0 +1,21 @@
+<div class="container-fluid container-fluid-1">
+  <div class="row-fluid">
+	<span class="span12">
+	  <div class="container-fluid">
+		<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>><%= task.name %>
+		<p class="p-1 p-5"><%= course.fullname %></p>
+		</h1>
+		<div class="row-fluid">
+		  <span class="span12">
+			<p class="p-1 p-2 p-3">Deadline <% print(str.format_time(task.dueDate)) %></p>
+			<p class="p-2 p-3 p-4">You have only one attempt to finish this quiz.</p>
+			<hr class="line">
+			<div>
+			  <p id="quiz-take-btn" class="p-1 p-3 p-4 tappable">Start</p> <i class="icon icon-pencil"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+			</div>
+		  </span>
+		</div>
+	  </div>
+	</span>
+  </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container-fluid container-fluid-2">
+	<% var isEmpty = true; for (var i in notifications) { var pi = notifications[i]; var followlink = false; isEmpty = false; %>
+	<% if((pi.link.indexOf("courses") != -1) || (pi.link.indexOf("tasks") != -1)) { followlink = true; %>
+	    <div class="row-fluid tappable follow-link" data-url="<%= pi.link %>" >
+	<% } else { %>
+	    <div class="row-fluid ">
+	<% } %>
+		<span class="span12">
+			<div class="container-fluid container-fluid-1">
+				<div class="rectangle">
+	<% if (pi.teacher) { %>
+        <span class="label label-warning">Teacher</span>
+	<% } %>
+					<img src="<%= pi.image %>" alt="<%= pi.author %>">
+				</div>
+				<% if(followlink){ %>
+				   <i class="icon icon-chevron-right pull-right"></i> 
+				<% } %>
+				<p class="p-1"><%= pi.coursename %></p>
+				<p class="p-2 p-3"><%= pi.author %> <%= pi.content %></p>
+				<p class="p-3 p-4"><% print(str.format_time(pi.date, false)) %></p>
+				
+			</div>
+		</span>
+	</div>
+	<% } %>
+<% if (isEmpty) { %>
+<div style="font-size: 26pt; text-align: center; line-height: normal; margin-top: 20%; color: #888;">No new notifications</div>
+<% } %>
+</div>

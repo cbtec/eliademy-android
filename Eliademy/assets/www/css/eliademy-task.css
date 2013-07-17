@@ -1,0 +1,84 @@
+ body {
+   padding-left: 0;
+   padding-right: 0;
+ }
+#main-content { background: #eaeaea; }
+.container-fluid.container-fluid-1 {
+  padding: 0px 10px 10px 10px;
+  margin-top: 15px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid {
+  background: #ffffff;
+  -moz-box-shadow: 0px 1px 5px 0px #474747;
+  -webkit-box-shadow: 0px 1px 5px 0px #474747;
+  -o-box-shadow: 0px 1px 5px 0px #474747;
+  box-shadow: 0px 1px 5px 0px #474747;
+  border-radius: 3px;
+  margin-bottom: 15px;
+  padding: 0px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid .heading {
+  padding: 10px 10px 10px 15px;
+  margin: 0px;
+  background: rgba(0, 0, 0, 0) url(../images/source.jpg) repeat 0px 0px;
+  background-size: cover;
+  font-family:"helvetica";
+  font-size: 30px;
+  color: #ffffff;
+  border-radius: 3px 3px 0px 0px;
+  text-shadow: 0px 1px 2px #000000;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid p.p-1 {
+  font-weight: bold;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid p.p-2 {
+  margin: 0px;
+  font-size: 18px;
+  line-height: 24px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid p.p-4 {
+font-size: 14px;
+line-height: 20px;
+  padding: 0px;
+  margin: 0px;
+  color: #ffffff;
+  text-shadow: 0px 1px 2px #000000;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid .row-fluid .span12 .p-1.p-2.p-5 {
+  padding: 15px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid .row-fluid .span12 .p-1.p-2.p-3 {
+  padding: 15px 15px 5px 15px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid .row-fluid .span12 p.p-6 {
+  padding: 2px 15px 0px 15px;
+  margin: 0px 0px 20px 0px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid div .p-1.p-3.p-7 {
+  padding: 15px 15px 15px 48px;
+  margin: 0px 0px -21px 0px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid div .icon.icon-download {
+  font-size: 18px;
+  margin: -15px 0px 0px 15px;
+  width: 18px;
+  height: 18px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid div .icon.icon-upload {
+  font-size: 18px;
+  margin: -15px 0px 0px 15px;
+  width: 18px;
+  height: 18px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid div .icon.icon-ok-sign {
+  font-size: 18px;
+  margin: -15px 0px 0px 15px;
+  width: 18px;
+  height: 18px;
+}
+.container-fluid-1 .row-fluid .span12 .container-fluid div .icon.icon-chevron-right {
+  font-size: 18px;
+  margin: -14px 10px 0px 0px;
+  height: 18px;
+  width: 18px;
+}

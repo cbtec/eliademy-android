@@ -1,0 +1,211 @@
+body {
+	width: 100%;
+	height: 100%;
+}
+
+table, td {
+	border-collapse: collapse;
+}
+
+a {
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+hr.line {
+	display: block;
+	background: none;
+	border: none;
+	margin: 0px 15px;
+	padding: 0px;
+	height: 1px;
+	border-top: 1px solid #bdbdbd;
+}
+
+.navbar {
+  height: 42px;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 100;
+  margin-top: -1px;
+}
+.navbar .navbar-inner {
+  background: #2c3e4f;
+  background-image: -moz-linear-gradient(270deg, #2c3e4f 0%, #1e2a36 100%);
+  background-image: -webkit-linear-gradient(270deg, #2c3e4f 0%, #1e2a36 100%);
+  background-image: -o-linear-gradient(270deg, #2c3e4f 0%, #1e2a36 100%);
+  background-image: linear-gradient(180deg, #2c3e4f 0%, #1e2a36 100%);
+  height: 42px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.navbar .navbar-inner .brand {
+  margin: 0px 0px 0px -15px;
+}
+.navbar .navbar-inner .image {
+  margin: 10px 0px 0px 43px;
+  height: 25px;
+}
+
+.navbar .rectangle {
+  background: #3f556e;
+  background-image: -moz-linear-gradient(270deg, #3f556e 0%, #1b252e 100%);
+  background-image: -webkit-linear-gradient(270deg, #3f556e 0%, #1b252e 100%);
+  background-image: -o-linear-gradient(270deg, #3f556e 0%, #1b252e 100%);
+  background-image: linear-gradient(180deg, #3f556e 0%, #1b252e 100%);
+  -moz-box-shadow: inset 0px 1px 3px 0px #000000;
+  -webkit-box-shadow: inset 0px 1px 3px 0px #000000;
+  -o-box-shadow: inset 0px 1px 3px 0px #000000;
+  box-shadow: inset 0px 1px 3px 0px #000000;
+  border-radius: 3px;
+  border: none;
+  width: 30px;
+  height: 30px;
+  display: inline-block;
+  margin: 5px 0px 0px -10px;
+  padding: 0px;
+}
+
+.navbar .rectangle:active {
+  background: #1b252e;
+  background-image: -moz-linear-gradient(270deg, #1b252e 0%, #3f556e 100%);
+  background-image: -webkit-linear-gradient(270deg, #1b252e 0%, #3f556e 100%);
+  background-image: -o-linear-gradient(270deg, #1b252e 0%, #3f556e 100%);
+  background-image: linear-gradient(180deg, #1b252e 0%, #3f556e 100%);
+  -moz-box-shadow: inset 0px 1px 3px 0px #000000;
+  -webkit-box-shadow: inset 0px 1px 3px 0px #000000;
+  -o-box-shadow: inset 0px 1px 3px 0px #000000;
+  box-shadow: inset 0px 1px 3px 0px #000000;
+}
+
+#toolbar-main-button i {
+  font-size: 16px;
+  color: #f3f9ff;
+  text-shadow: 0px 1px 1px #000000;
+  height: 25px;
+  width: 16px;
+  margin: -3px 0px 0px 12px;
+}
+
+#toolbar-main-button {
+	position: relative;
+	top: -10px;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+#toolbar-refresh-button {
+	position: relative;
+	top: -10px;
+	padding-top: 20px;
+	padding-right: 20px;
+}
+
+#app-toolbar { box-shadow: 0px 1px 2px #000; }
+#main-content { box-shadow: -2px 0px 4px #000; }
+
+.tappable {
+	user-select: none;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+}
+
+.tappable:active {
+	background-color: #8BBCFF;
+}
+
+#toolbar-refresh-button i {
+  font-size: 16px;
+  color: #f3f9ff;
+  text-shadow: 0px 1px 1px #000000;
+  height: 25px;
+  width: 16px;
+  margin: -3px 0px 0px 12px;
+}
+
+#toolbar-refresh-button.spinning i {
+    -webkit-animation-name: spin;
+    -webkit-animation-duration: 800ms;
+    -webkit-animation-iteration-count: infinite;
+    -webkit-animation-timing-function: linear;
+    -webkit-transform-origin: 8px 7px;
+
+    animation-name: spin;
+    animation-duration: 800ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    transform-origin: 8px 7px;
+}
+
+@-webkit-keyframes spin {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+
+#base-content {
+	overflow: hidden;
+}
+
+
+#main-content > div.switchAA {
+	-webkit-animation: switchAA 0.3s ease-in;
+	-webkit-transform: translateX(100%);
+}
+
+@-webkit-keyframes switchAA {
+	from { -webkit-transform: translateX(0px); }
+	to { -webkit-transform: translateX(100%); }
+}
+
+#main-content > div.switchAB {
+	-webkit-animation: switchAB 0.4s ease-out;
+	-webkit-transform: translateX(0px);
+}
+
+@-webkit-keyframes switchAB {
+	from { -webkit-transform: translateX(-100%); }
+	to { -webkit-transform: translateX(0px); }
+}
+
+#main-content > div.switchBA {
+	-webkit-animation: switchBA 0.3s ease-in;
+	-webkit-transform: translateX(100%);
+}
+
+@-webkit-keyframes switchBA {
+	from { -webkit-transform: translateX(0px); }
+	to { -webkit-transform: translateX(-100%); }
+}
+
+#main-content > div.switchBB {
+	-webkit-animation: switchBB 0.4s ease-out;
+	-webkit-transform: translateX(0px);
+}
+
+@-webkit-keyframes switchBB {
+	from { -webkit-transform: translateX(100%); }
+	to { -webkit-transform: translateX(0px); }
+}
+
+
+/* Centering elements */
+body .pull-center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+i.icon, i.icon-white {
+  text-align: center;
+  background-image: none;
+}

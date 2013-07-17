@@ -1,0 +1,57 @@
+<div class="container-fluid container-fluid-3">
+
+<% _.each(csections, function (section, idx) { if (section.visible) { %>
+
+<% if (!idx) { %>
+  <div class="container-fluid container-fluid-1 container-fluid-4">
+	<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>><%= course.fullname %></h1>
+	<p class="p-1 p-3 p-4 p-5">Introduction</p>
+	<div class="p-2 p-6" style="overflow: auto;"><%= section.summary %></div>
+<% } else  { %>
+  <div class="container-fluid container-fluid-1">
+	<p class="p-3 p-4 p-7 p-9"><%= section.name %></p>
+	<div class="p-5 p-6" style="overflow: auto;"><%= section.summary %></div>
+<% } %>
+
+  <% _.each(section.attachments.toJSON(), function (attachment) { if (attachment.visible === undefined || attachment.visible) { %>
+
+	<% if (attachment.contents[0].type == "image") { %>
+	<div class="container-fluid container-fluid-2 container-fluid-6 tappable download-link" filename="<%= attachment.contents[0].filename %>" mimetype="<%= attachment.contents[0].mimetype %>" data-url="<%= attachment.url %>">
+	  <div class="paragraph"></div>
+	  <img src="<%= attachment.url %>" class="pull-center image">
+	</div>
+	<% } else if (attachment.contents[0].type == "url") { %>
+		<% if (attachment.type == "youtube") { %>
+	<div class="container-fluid container-fluid-2 container-fluid-6 tappable follow-link" data-url="<%= attachment.contents[0].fileurl %>">
+	  <div class="paragraph"></div>
+  	  <img src="http://img.youtube.com/vi/<%= attachment.videoid %>/hqdefault.jpg" class="pull-center image">
+	  <div style="background: url('images/play.png') no-repeat 20px 50%; background-size: 80px auto; position: absolute; height: 100px; width: 100%; margin-top: -100px;"></div>
+	</div>
+		<% } else if (attachment.type == "vimeo") { %>
+	<div class="container-fluid container-fluid-2 container-fluid-6 tappable follow-link" data-url="<%= attachment.contents[0].fileurl %>">
+	  <div class="paragraph"></div>
+	  <img style="display: none;" id="vimeo-preview-<%= attachment.id %>" class="pull-center image">
+	  <div style="background: url('images/play.png') no-repeat 20px 50%; background-size: 80px auto; position: absolute; height: 100px; width: 100%; margin-top: -100px;"></div>
+	</div>
+		<% } else { %>
+    <hr class="line">
+	<div class="div-1">
+	  <p class="p-3 p-5 p-7 p-8 tappable follow-link" filename="<%= attachment.contents[0].filename %>" mimetype="<%= attachment.contents[0].mimetype %>" data-url="<%= attachment.contents[0].fileurl %>"><%= attachment.name %></p> <i class="icon icon-chevron-right pull-right"></i> 
+	  <img src="images/new-material-link.png" class="image">
+	</div>
+		<% } %>
+	<% } else { %>
+    <hr class="line">
+	<div class="div-1">
+	  <p class="p-3 p-5 p-7 p-8 tappable download-link" filename="<%= attachment.contents[0].filename %>" mimetype="<%= attachment.contents[0].mimetype %>" data-url="<%= attachment.url %>"><%= attachment.name %></p> <i class="icon icon-chevron-right pull-right"></i> 
+	  <img src="images/new-material-download.png" class="image">
+	</div>
+	<% } %>
+
+  <% }}); %>
+
+  </div>
+
+<% }}); %>
+
+</div>

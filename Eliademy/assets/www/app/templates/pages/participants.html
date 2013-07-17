@@ -1,0 +1,25 @@
+<div class="container-fluid container-fluid-3">
+  <div class="row-fluid row-fluid-1">
+	<span class="span12">
+	  <div class="container-fluid container-fluid-1">
+		<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>>Participants</h1>
+		<p><%= course.fullname %></p>
+	  </div>
+	</span>
+  </div>
+<% _.each(participants, function (participant) { %>
+  <div class="row-fluid">
+	<span class="span12">
+	  <div class="container-fluid container-fluid-1 container-fluid-2">
+		<div class="rectangle" style="background-image: url('<%= participant.picUrlLarge %>');">
+	<% if (participant.teacher) { %>
+        <span class="label label-warning">Teacher</span>
+	<% } %>
+		</div>
+		<p class="p-1"><%= participant.fullname %></p>
+		<p class="p-2 participant-email tappable"><%= participant.email %></p>
+	  </div>
+	</span>
+  </div>
+<% }); %>
+</div>

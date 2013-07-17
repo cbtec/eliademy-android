@@ -1,0 +1,6 @@
+*/bin/
+*/gen/
+.htaccess
+.classpath
+.project
+.settings

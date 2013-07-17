@@ -1,0 +1,47 @@
+<div class="container-fluid container-fluid-1">
+  <div class="row-fluid">
+	<span class="span12">
+	  <div class="container-fluid">
+		<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>><%= task.name %>
+		<p class="p-1 p-4"><%= course.fullname %></p>
+		</h1>
+		<div class="row-fluid" style="overflow: auto;">
+		  <span class="span12">
+			<p class="p-1 p-2 p-5">Deadline <% print(str.format_time(task.dueDate)) %></p>
+			<hr class="line">
+			<p class="p-1 p-2 p-3">Instructions</p>
+			<p class="p-6"><%= task.intro %></p>
+		  </span>
+		</div>
+
+    <% _.each(attachments, function(attachment) { if (attachment.visible === undefined || attachment.visible) { %>
+	    <hr class="line">
+		<div>
+		  <p class="p-1 p-3 p-7 tappable submission" filename="<%= attachment.filename %>" mimetype="<%= attachment.mimetype %>" value="<%= attachment.url %>" ><%= attachment.name %></p> <i class="icon icon-download"></i>
+		</div>
+	<% }}); %>
+
+	<% _.each(fileSubmissions, function (submission) { %>
+		<hr class="line">
+		<div>
+		  <p class="p-1 p-3 p-7 tappable submission" value="<%= submission.url %>" ><%= submission.filename %></p> <i class="icon icon-ok-sign"></i>
+		</div>
+	<% }); %>
+
+	<% if (!task.nosubmissions) { %>
+		<hr class="line">
+		<div>
+		  <p id="task-submit-file" class="p-1 p-3 p-7 tappable">Upload file</p> <i class="icon icon-upload"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+		</div>
+		<div style="padding: 15px;">
+	     <textarea id="submission-textarea" style="height: 100px; width: 100%;" placeholder="Write here"><%= sub.text %></textarea>
+		 <div class="btn-group span12">
+		  <button id="task-draft-btn" class="btn tappable" style="width: 50%; height: 35px;">Save as draft</button>
+		  <button id="task-submit-btn" class="btn tappable" style="width: 50%; height: 35px;">Submit</button>
+		 </div>
+		</div>
+	<% } %>
+	  </div>
+	</span>
+  </div>
+</div>

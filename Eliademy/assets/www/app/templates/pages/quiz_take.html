@@ -1,0 +1,61 @@
+<div class="container-fluid container-fluid-4">
+  <div class="row-fluid">
+	<span class="span12">
+	  <div class="container-fluid container-fluid-1">
+		<h1 class="heading"<% if (course.coursebackground) { print(" style=\"background-image: url('" + course.coursebackground + "');\""); } %>><%= task.name %>
+		<p><%= course.fullname %></p>
+		</h1>
+	  </div>
+	</span>
+  </div>
+
+<% _.each(task.questions, function (question, idx) { %>
+  <div class="container-fluid container-fluid-1 container-fluid-2 container-fluid-3">
+	<div class="row-fluid">
+	  <span class="span12">
+		<p class="p-1 p-3"><strong><% print(idx + 1) %>.</strong></p>
+		<p class="p-2 p-4" style="overflow: auto;"><%= question.text %></p>
+
+
+<% _.each(attachments, function (att) { if (((!att.options && !idx) || (parseInt(att.options) == idx)) && (att.visible === undefined || att.visible)) { %>
+	<% if (att.type == "image") { %>
+		<div class="container-fluid container-fluid-3">
+		  <div class="paragraph tappable download-link" data-url="<%= att.url %>" data-filename="<%= att.filename %>">
+		   <img src="<%= att.url %>" style="height: 200px; width: auto;">
+		  </div>
+		</div>
+	<% } %>
+<% }}); %>
+
+<% var firstLink = true; _.each(attachments, function (att) { if (((!att.options && !idx) || (parseInt(att.options) == idx)) && (att.visible === undefined || att.visible)) { %>
+	<% if (att.type != "image") { %>
+	<% if (firstLink) { firstLink = false; %>
+	 <hr class="line">
+	<% } %>
+	 <div>
+	  <i style="float: right; margin: 19px 10px 0px 0px; font-size: 18px;" class="icon icon-chevron-right pull-right"></i> 
+	  <img style="float: left; margin: 11px 0px 0px 10px;" src="images/new-material-link.png" class="image">
+	  <p class="tappable download-link" style="margin: 0px; padding: 15px 15px 15px 48px;" data-url="<%= att.url %>" data-filename="<%= att.filename %>"><%= att.name %></p>
+	 </div> 
+	  <hr class="line">
+	<% } %>
+<% }}); %>
+
+<% _.each(question.answers, function (answer) { %>
+		<label class="checkbox tappable">
+		  <input type="checkbox" data-field="questions|<%= question.cid %>|answers|<%= answer.cid %>|student_answer">
+		  <span><%= answer.text %></span>
+		</label>
+<% }); %>
+
+	  </span>
+	</div>
+  </div>
+<% }); %>
+
+  <div class="row-fluid row-fluid-1">
+	<span class="span12">
+	  <a href="#" style="display: block;" class="btn btn-primary btn-large tappable" id="quiz-finish-btn">Finish</a>
+	</span>
+  </div>
+</div>

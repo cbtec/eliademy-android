@@ -1,0 +1,34 @@
+<div class="container-fluid container-fluid-2">
+<% var isEmpty = true; _.each(tasks, function (task) { isEmpty = false; %>
+  <div class="row-fluid">
+	<span class="span12">
+	  <div class="container-fluid container-fluid-1">
+		<h1 class="heading"<% if (task.course.coursebackground) { print(" style=\"background-image: url('" + task.course.coursebackground + "');\""); } %>><%= task.name %>
+		<p class="p-2 p-4"><%= task.course.fullname %></p>
+		</h1>
+		<div class="row-fluid">
+		  <span class="span12">
+			<% if (task.dueDate && !task.graded) { %>
+			<p class="p-1 p-3 p-5">Deadline <%= str.format_time(task.dueDate) %></p>
+			<% } %>
+			<div>
+			<hr class="line">
+		  <% if (task.graded) { %>
+              <span class="label label-success">Grade <%= task.gradestring %></span>
+              <div class="feedback"><%= task.feedback %></div>
+		  <% } else if (task.modulename == "quiz") { %>
+			  <p class="p-1 p-6 task-link tappable" data-task-id="<%= task.instanceid %>" data-task-type="<%= task.modulename %>">Take quiz</p> <i class="icon icon-edit"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+		  <% } else { %>
+			  <p class="p-1 p-6 task-link tappable" data-task-id="<%= task.instanceid %>" data-task-type="<%= task.modulename %>"><% print(task.nosubmissions ? "View task" : "Return task"); %></p> <i class="icon icon-edit"></i>  <i class="icon icon-chevron-right pull-right"></i> 
+		  <% } %>
+			</div>
+		  </span>
+		</div>
+	  </div>
+	</span>
+  </div>
+<% }); %>
+<% if (isEmpty) { %>
+<div style="font-size: 26pt; text-align: center; line-height: normal; margin-top: 20%; color: #888;">No tasks or quizzes</div>
+<% } %>
+</div>
